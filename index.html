@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXAMMATE | Student Success</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">EXAM<span>MATE</span></div>
+    <button onclick="toggleMenu()" class="menu">☰</button>
+    <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#exams">Exams</a>
+        <a href="#practice">Practice</a>
+        <a href="#results">My Results</a>
+        <a href="#ai">Ask AI</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="tag">YOUR FUTURE STARTS HERE</p>
+        <h1>Prepare Today.<br><span>Shine Tomorrow.</span></h1>
+        <p>Your personal examination companion for WAEC,
+        NECO and GCE. Learn, practise and achieve your dreams.</p>
+        <button onclick="scrollToSection('exams')">Start Learning →</button>
+    </div>
+    <div class="hero-icon">🎓</div>
+</section>
+
+<section class="stats">
+    <div><h2>03</h2><p>Exam Categories</p></div>
+    <div><h2>10+</h2><p>Subjects</p></div>
+    <div><h2>24/7</h2><p>Learning Access</p></div>
+</section>
+
+<section class="section" id="exams">
+    <h2>Choose Your Examination</h2>
+    <p class="subtitle">Select the examination you're preparing for.</p>
+
+    <div class="grid">
+        <div class="card">
+            <div class="icon">📘</div>
+            <h3>WAEC</h3>
+            <p>Prepare for your West African examinations.</p>
+            <button onclick="selectExam('WAEC')">Explore WAEC</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">📗</div>
+            <h3>NECO</h3>
+            <p>Build confidence through regular practice.</p>
+            <button onclick="selectExam('NECO')">Explore NECO</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">📕</div>
+            <h3>GCE</h3>
+            <p>Get ready for your external examinations.</p>
+            <button onclick="selectExam('GCE')">Explore GCE</button>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="practice">
+    <h2>Practice Centre</h2>
+    <p class="subtitle" id="examTitle">Choose a subject to begin practising.</p>
+
+    <select id="subject">
+        <option value="">Select Subject</option>
+        <option>Mathematics</option>
+        <option>English Language</option>
+        <option>Biology</option>
+        <option>Chemistry</option>
+        <option>Physics</option>
+        <option>Literature-in-English</option>
+        <option>Government</option>
+        <option>CRS</option>
+        <option>Economics</option>
+    </select>
+
+    <button onclick="startQuiz()">Start Practice</button>
+
+    <div id="quiz" class="quiz-box"></div>
+</section>
+
+<section class="section results" id="results">
+    <h2>My Performance</h2>
+    <p>Track your progress and celebrate your improvement.</p>
+
+    <div class="result-box">
+        <div class="score" id="score">--</div>
+        <h3 id="resultTitle">Your results will appear here.</h3>
+        <p id="resultMessage">Complete a practice test to see your performance.</p>
+    </div>
+</section>
+
+<section class="section ai-section" id="ai">
+    <h2>🤖 EXAMMATE AI</h2>
+    <p>Your personal study companion. Ask questions and learn.</p>
+
+    <div class="chat">
+        <div id="chatMessages">
+            <div class="bot">
+                Hello! I'm EXAMMATE AI. What subject would you
+                like help with today?
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input id="userInput" placeholder="Ask me anything...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</section>
+
+<section class="section motivation">
+    <h2>❤️ Your Future Is Bigger Than One Examination</h2>
+    <p>
+        Your examination results are part of your journey,
+        not the definition of your worth. Keep learning,
+        keep believing and keep moving forward.
+    </p>
+    <h3>YOU ARE CAPABLE OF GREAT THINGS.</h3>
+</section>
+
+<footer>
+    <h2>EXAMMATE</h2>
+    <p>Prepare. Perform. Believe. Become.</p>
+    <p>© 2026 EXAMMATE. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+  </html>
